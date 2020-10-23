@@ -4,6 +4,8 @@ var express         = require("express"),
     methodOverride  = require("method-override"),
     mongoose        = require('mongoose');
 
+var PORT = process.env.PORT || 3000;
+
 // Connection to DB
 mongoose.connect('mongodb+srv://rehab:rehab@cluster0.siutf.mongodb.net/grootgamedb?retryWrites=true&w=majority', function(err, res) {
   if(err) throw err;
@@ -44,6 +46,6 @@ grootusers.route('/grootusers/:id')
 app.use('/api', grootusers);
 
 // Start server
-app.listen(3000, function() {
+app.listen(PORT, function() {
   console.log("Node server running on http://localhost:3000");
 });
