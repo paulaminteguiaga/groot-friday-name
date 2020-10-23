@@ -1,0 +1,166 @@
+@font-face {
+    font-family: 'helveticabold';
+    src: url('fonts/helvetica-bold-font-webfont.woff2') format('woff2'), url('fonts/helvetica-bold-font-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background: #ffff01;
+}
+
+body {
+    font-family: 'helveticabold', sans-serif;
+    color: #000;
+}
+
+a {
+    color: #000;
+}
+
+h4 {
+    margin-bottom: 2rem;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+    header {
+        padding: 0 5rem;
+    }
+
+    header.sticky-top {
+        top: 1rem;
+    }
+
+    header, main, footer, main > div {
+        margin-top: 3rem;
+    }
+
+        header .nav  a {
+            display: inline-block;
+            margin-left: 2rem;
+        }
+
+        header .nav a:hover {
+            transform: rotateZ(180deg);
+        }
+
+        .welcome {
+            font-size: 2rem;
+        }
+            .welcome p span {
+                background-color: #ffff01;
+            }
+
+        .qr-container {
+            min-height: 15rem;
+        }
+
+            .qr {
+                position: absolute;
+                /*posicion a al que se mueve*/
+                top: 30%;
+                right: 20%;
+                /*posicion original
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%); */
+            }
+
+                .qr img {
+                    width: 10rem;
+                }
+
+                .banner img {
+                    width: 100%;
+                }
+
+        .stuff a {
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            background: transparent;
+            border: none;
+        }
+
+        .stuff a.prev {
+            left: 0;
+            top: 0;
+            cursor: url('https://cdn.shopify.com/s/files/1/1809/3005/t/3/assets/cursor-left.png?50'), auto;
+        }
+
+        .stuff a.next {
+            top: 0;
+            right: 0;
+            cursor: url('https://cdn.shopify.com/s/files/1/1809/3005/t/3/assets/cursor-right.png?50'), auto;
+        }
+
+        .work {
+            width: 30%;
+        }
+
+            .work img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .work .work-desc {
+                position: absolute;
+            }
+
+        .contact form .form-control {
+            border-color: #000;
+            color: #000;
+        }
+
+        .contact form .form-control:focus {
+            border-color: #000;
+            box-shadow: none;
+        }
+
+        .contact form .text-muted {
+            color: #ffff01!important;
+        }
+
+        .contact form .send {
+            color: #fff;
+            background-color: #000;
+        }
+
+        .contact form .send:hover {
+            background-color: #ffff01;
+        }
+
+    footer {
+        height: 4rem;
+    }
+
+@media (max-width: 961px) {
+    header {
+        padding: 0 2rem;
+    }
+
+    .brand {
+        text-align: center!important;
+        padding-left: 15px;
+    }
+
+        .brand h1 {
+            font-size: 1.5rem;
+        }
+
+    .nav {
+        justify-content: center!important;
+        padding-right: 15px;
+    }
+}

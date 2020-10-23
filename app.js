@@ -1,4 +1,5 @@
 var express         = require("express"),
+    path            = require('path'),
     app             = express(),
     bodyParser      = require("body-parser"),
     methodOverride  = require("method-override"),
@@ -21,13 +22,11 @@ app.use(methodOverride());
 var models     = require('./models/grootuser')(app, mongoose);
 var GrootUserCtrl = require('./controllers/grootusers');
 
-// Example Route
-var router = express.Router();
-router.get('/', function(req, res) {
-  res.send("Groot Friday Game");
-});
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(router);
+app.get('/', (req, res) => res.render('public'));
+
+//app.use(router);
 
 // API routes
 var grootusers = express.Router();
