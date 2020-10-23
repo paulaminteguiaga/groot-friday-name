@@ -24,7 +24,7 @@ var GrootUserCtrl = require('./controllers/grootusers');
 // Example Route
 var router = express.Router();
 router.get('/', function(req, res) {
-  res.send("Hello world!");
+  res.send("Groot Friday Game");
 });
 
 app.use(router);
